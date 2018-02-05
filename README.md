@@ -4,7 +4,8 @@ A sample project about car animation in a route in Google Map
 ![alt Car Animation](https://github.com/shihabmi7/CarAnimation/blob/master/app/device-2018-02-05-141121.png)
 
 # Youtube link
-https://www.youtube.com/channel/UCJ81V8JgbB1dijhuXeiRi9w/videos?view_as=subscriber
+
+https://www.youtube.com/watch?v=2n3kJFjbTSU
 
 # How to Run
 Just Give your Google API key in your google_maps_api.xml file. 
