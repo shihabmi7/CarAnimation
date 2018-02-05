@@ -80,6 +80,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     void polyLine() {
 
+        googleMap.clear();
 
         polyLineList = MapUtils.decodePoly(polyLine);
 
@@ -160,7 +161,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         LatLng latLng = new LatLng(latitude, longitude);
 
         marker = googleMap.addMarker(new MarkerOptions().position(latLng).
-                flat(true).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_car)));
+                flat(true).icon(BitmapDescriptorFactory.fromResource(R.mipmap.new_car_small)));
 
 
         index = -1;
