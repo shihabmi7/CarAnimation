@@ -6,6 +6,9 @@ A sample project about car animation in a route in Google Map
 # Youtube link
 https://www.youtube.com/channel/UCJ81V8JgbB1dijhuXeiRi9w/videos?view_as=subscriber
 
+# How to Run
+Just Give your Google API key in your google_maps_api.xml file. 
+
 ## About 
 
 From Google Direction Api we can got a poly line. A poline is a combiantion of Latitide and Longitude. I  iterate though all list of 
