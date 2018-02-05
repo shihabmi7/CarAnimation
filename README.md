@@ -11,7 +11,8 @@ https://www.youtube.com/channel/UCJ81V8JgbB1dijhuXeiRi9w/videos?view_as=subscrib
 From Google Direction Api we can got a poly line. A poline is a combiantion of Latitide and Longitude. I  itereate though all list of 
 LatLong object and use ValueAnimator to animate movement. It is possible to get Latlong from server and move with the direction.
 
-Special Thanks to @amanjeetsingh150
+## Special Thanks 
+ @amanjeetsingh150
 
 
 
