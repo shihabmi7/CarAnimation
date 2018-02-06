@@ -84,7 +84,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
 
-//               polyLine();
+//               staticPolyLine();
 //                dynamicPolyLine();
                 startGettingOnlineDataFromCar();
 
@@ -94,7 +94,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         handler = new Handler();
     }
 
-    void polyLine() {
+    void staticPolyLine() {
 
         googleMap.clear();
 
@@ -121,10 +121,10 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    Runnable carRunnable = new Runnable() {
+    Runnable staticCarRunnable = new Runnable() {
         @Override
         public void run() {
-            Log.i(TAG, "carRunnable handler called...");
+            Log.i(TAG, "staticCarRunnable handler called...");
             if (index < (polyLineList.size() - 1)) {
                 index++;
                 next = index + 1;
@@ -184,13 +184,13 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         index = -1;
         next = 1;
-        handler.postDelayed(carRunnable, 3000);
+        handler.postDelayed(staticCarRunnable, 3000);
     }
 
     void stopRepeatingTask() {
 
-        if (carRunnable != null) {
-            handler.removeCallbacks(carRunnable);
+        if (staticCarRunnable != null) {
+            handler.removeCallbacks(staticCarRunnable);
         }
     }
 
@@ -391,7 +391,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         handler.post(mStatusChecker);
     }
 
-    void CreatePolyLine() {
+    void CreatePolyLineOnly() {
 
         googleMap.clear();
 
