@@ -41,8 +41,14 @@ import java.util.Map;
 
 import static com.google.android.gms.maps.model.JointType.ROUND;
 import static me.shihab.caranimation.MapUtils.getBearing;
+/**
+ * A demonstration about car movement on google map
+       by @Shihab Uddin
+*/
 
 public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private static final long DELAY = 4500;
+    private static final long ANIMATION_TIME_PER_ROUTE = 3000;
     String polyLine = "q`epCakwfP_@EMvBEv@iSmBq@GeGg@}C]mBS{@KTiDRyCiBS";
     GoogleMap googleMap;
     private PolylineOptions polylineOptions;
@@ -63,7 +69,8 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     double longitude = 90.4007049;
     private String TAG = "HomeActivity";
 
-    public static final String DRIVER_LOCATION_ON_RIDE = "https://admin.muv.fun/get-driver-coords";
+    // Give your Server URL here >> where you get car location update
+    public static final String DRIVER_LOCATION_ON_RIDE = "*******";
     private boolean isFirstPosition = true;
     private Double startLatitude;
     private Double startLongitude;
@@ -273,9 +280,6 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                         } else {
                             endPosition = new LatLng(startLatitude, startLongitude);
-                            /**
-                             * 1/31/2018  maker dissapear if we not check..
-                             */
 
                             Log.d(TAG, startPosition.latitude + "--" + endPosition.latitude + "--Check --" + startPosition.longitude + "--" + endPosition.longitude);
 
@@ -336,7 +340,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         Log.i(TAG, "startBikeAnimation called...");
 
         ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, 1);
-        valueAnimator.setDuration(3000);
+        valueAnimator.setDuration(ANIMATION_TIME_PER_ROUTE);
         valueAnimator.setInterpolator(new LinearInterpolator());
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -382,7 +386,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Log.e(TAG, e.getMessage());
             }
 
-            handler.postDelayed(mStatusChecker, 6000);
+            handler.postDelayed(mStatusChecker, DELAY);
 
         }
     };
