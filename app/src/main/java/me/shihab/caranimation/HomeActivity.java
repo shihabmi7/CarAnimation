@@ -41,9 +41,15 @@ import java.util.Map;
 
 import static com.google.android.gms.maps.model.JointType.ROUND;
 import static me.shihab.caranimation.MapUtils.getBearing;
+
+
 /**
  * A demonstration about car movement on google map
        by @Shihab Uddin
+
+ TO RUN -> GIVE YOUR GOOGLE API KEY to >  google_maps_api.xml file
+        -> GIVE YOUR SERVER URL TO FETCH LOCATION UPDATE
+
 */
 
 public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback {
