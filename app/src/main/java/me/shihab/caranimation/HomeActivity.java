@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     private String TAG = "HomeActivity";
 
     // Give your Server URL here >> where you get car location update
-    public static final String DRIVER_LOCATION_ON_RIDE = "*******";
+    public static final String URL_DRIVER_LOCATION_ON_RIDE = "*******";
     private boolean isFirstPosition = true;
     private Double startLatitude;
     private Double startLongitude;
@@ -248,7 +248,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void getDriverLocationUpdate() {
 
-        StringRequest request = new StringRequest(Request.Method.POST, DRIVER_LOCATION_ON_RIDE, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, URL_DRIVER_LOCATION_ON_RIDE, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
